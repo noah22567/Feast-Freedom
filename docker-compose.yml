@@ -37,6 +37,10 @@ services:
       - postgres_data:/var/lib/postgresql/data
     env_file:
       - .db.env
+  redis:
+    image: redis:5.0.5-alpine
+    expose:
+      - "6379"
 
 volumes:
   postgres_data:
