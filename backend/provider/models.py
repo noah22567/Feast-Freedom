@@ -11,7 +11,6 @@ class ServiceProvider(models.Model):
     userID = models.ForeignKey(myUser,on_delete=models.CASCADE)
     ServiceProviderName = models.CharField(max_length=20)
 
-
 class Kitchen(ServiceProvider, models.Model):
 
     ServiceProviderID = models.ForeignKey(ServiceProvider,on_delete=models.CASCADE)
@@ -25,4 +24,3 @@ class MenuItem(models.Model):
     item_name = models.CharField(max_length=20, blank=False)
     Veg = models.BooleanField(null=True)
     Price = models.DecimalField(max_digits=10000, decimal_places=2)
-
